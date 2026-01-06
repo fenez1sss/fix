@@ -35,7 +35,7 @@
             letter-spacing: -1px;
         }
 
-        /* БЛОК НОВОСТЕЙ (Добавил сюда) */
+        /* БЛОК НОВОСТЕЙ */
         .news-container {
             width: 100%; max-width: 450px;
             padding: 20px; box-sizing: border-box;
@@ -62,6 +62,19 @@
         .news-date { font-size: 11px; color: #00ff85; font-weight: 800; margin-bottom: 4px; }
         .news-text { font-size: 15px; color: #eee; font-weight: 500; }
 
+        /* КНОПКА ПЕРЕХОДА К СОСТАВУ */
+        .squad-btn {
+            display: block; width: 100%;
+            background: #111; color: #00ff85;
+            text-align: center; text-decoration: none;
+            padding: 18px; border: 1px solid #00ff85;
+            border-radius: 12px; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin: 10px 0 30px 0;
+            transition: 0.3s; box-sizing: border-box;
+        }
+        .squad-btn:active { background: #00ff85; color: #000; }
+
         /* Контентная часть */
         .content-section {
             width: 100%; max-width: 450px;
@@ -75,21 +88,13 @@
             transition: all 0.6s ease-out;
         }
 
-        /* Класс для анимации при скролле */
         .info-block.reveal { opacity: 1; transform: translateY(0); }
 
-        h2 {
-            font-size: 24px; font-weight: 700;
-            text-transform: uppercase; margin-bottom: 15px;
-        }
-
+        h2 { font-size: 24px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; }
         p { font-size: 16px; line-height: 1.6; color: #888; margin-bottom: 20px; }
 
         .steps { list-style: none; padding: 0; }
-        .steps li {
-            font-size: 16px; margin-bottom: 12px;
-            display: flex; align-items: center; color: #fff;
-        }
+        .steps li { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; color: #fff; }
         .steps li::before { content: "—"; margin-right: 10px; color: #333; }
 
         .cta-button {
@@ -123,6 +128,8 @@
             <div class="news-text">Идет отбор в FIX TEAM. Пиши в ЛС, чтобы занять место в основе и сниматься в роликах</div>
         </div>
 
+        <a href="squad.html" class="squad-btn">Посмотреть состав команды</a>
+
         <div class="news-item">
             <div class="news-date">СЕГОДНЯ</div>
             <div class="news-text">Идею с новостями предложил наш тг-админ Дамир</div>
@@ -130,7 +137,6 @@
     </div>
 
     <div class="content-section">
-        
         <div class="info-block">
             <h2>О карьере</h2>
             <p>Карьера с сабами - это полноценная карьера, где каждый игрок в составе — мой подписчик. Мы начинаем с создания клуба и идем к вершине футбола.</p>
@@ -155,7 +161,6 @@
     </div>
 
     <script>
-        // Скрипт для появления блоков при скролле
         const blocks = document.querySelectorAll('.info-block');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
